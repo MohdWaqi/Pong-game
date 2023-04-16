@@ -2,6 +2,7 @@ from turtle import Turtle
 import random
 POSITION = (0, random.randint(-250, 250))
 
+################## Defining the ball behaviour and its properties such as speed color etc #####################
 
 class Ball(Turtle):
 

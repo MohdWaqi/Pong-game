@@ -3,6 +3,8 @@ from paddle import Paddle
 from ball import Ball
 from score import Score
 import time
+
+######################## Setting up the screen ############################
 screen = Screen()
 screen.bgcolor("black")
 screen.setup(800, 600)
@@ -15,11 +17,20 @@ paddle_2 = Paddle(distance_2)
 ball = Ball()
 score = Score()
 screen.listen()
+
+################## Controls of Player 1 ###########################
+
 screen.onkey(fun=paddle_1.move_up, key="Up")
 screen.onkey(fun=paddle_1.move_down, key="Down")
+
+################ Controls of Player 2 ###########################
+
 screen.onkey(fun=paddle_2.move_up, key="w")
 screen.onkey(fun=paddle_2.move_down, key="s")
 is_game_on = True
+
+################## Ball Functionality and interaction with the pads ##########################
+
 while is_game_on:
     time.sleep(ball.move_speed)
     screen.update()
@@ -36,17 +47,6 @@ while is_game_on:
         ball.refresh()
         score.increase_player1()
         time.sleep(1)
-
-
-
-
-
-
-
-
-
-
-
 
 
 screen.exitonclick()

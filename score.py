@@ -2,6 +2,8 @@ from turtle import Turtle
 FONT = ("Arial", 50, "normal")
 ALIGNMENT = "center"
 
+################## Setting up the Score Board ######################
+
 
 class Score(Turtle):
 

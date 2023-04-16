@@ -1,5 +1,7 @@
 from turtle import Turtle
 
+################# Defining pad properties , apperance and movement ########################
+
 
 class Paddle(Turtle):
 
